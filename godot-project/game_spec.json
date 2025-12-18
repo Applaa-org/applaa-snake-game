@@ -1,0 +1,49 @@
+{
+  "game": {
+    "name": "Snake Game",
+    "type": "2D",
+    "genre": "arcade",
+    "description": "Top-down arcade game inspired by Centipede with retro aesthetic"
+  },
+  "settings": {
+    "window": {"width": 800, "height": 600},
+    "physics": {"gravity": 0}
+  },
+  "player": {
+    "name": "Player",
+    "health": 1,
+    "speed": 200,
+    "abilities": ["shoot"]
+  },
+  "entities": {
+    "enemies": [
+      {
+        "name": "WormSegment",
+        "health": 1,
+        "speed": 50,
+        "damage": 1,
+        "behavior": "follow"
+      }
+    ],
+    "collectibles": [
+      {
+        "name": "Points",
+        "value": 10
+      }
+    ]
+  },
+  "levels": [
+    {
+      "name": "Main Arena",
+      "background": "retro_green",
+      "obstacles": ["walls"]
+    }
+  ],
+  "logic": {
+    "winCondition": "high_score",
+    "loseCondition": "player_collision",
+    "scoring": {
+      "pointsPerKill": 10
+    }
+  }
+}

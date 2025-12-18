@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://wormsegment"]
+
+[ext_resource type="Script" path="res://scripts/WormSegment.gd" id="1"]
+
+[node name="WormSegment" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = null
+centered = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = CircleShape2D.new()
